@@ -25,13 +25,22 @@ function App() {
   }
 
   async function stopRecording() {
-    setStatus("⏳ Deteniendo grabación...");
+    setStatus(" Deteniendo grabación...");
     try {
       const result = await invoke<string>("stop_recording");
       setStatus(result);
       setIsRecording(false);
     } catch (error) {
-      setStatus(`❌ Error al detener: ${String(error)}`);
+      setStatus(` Error al detener: ${String(error)}`);
+    }
+  }
+
+  async function openRecordingsFolder() {
+    try {
+      const result = await invoke<string>("open_recordings_folder");
+      setStatus(result);
+    } catch (error) {
+      setStatus(`❌ Error al abrir carpeta: ${String(error)}`);
     }
   }
 
@@ -85,12 +94,30 @@ function App() {
               fontWeight: "bold" 
             }}
           >
-            ⏹️ Parar
+            ️ Parar
           </button>
         )}
       </div>
 
-      <p style={{ marginTop: "30px", fontSize: "18px", color: "#555" }}>
+      <div style={{ marginTop: "15px" }}>
+        <button
+          onClick={openRecordingsFolder}
+          style={{
+            padding: "10px 20px",
+            fontSize: "16px",
+            backgroundColor: "#4a90d9",
+            color: "white",
+            border: "none",
+            borderRadius: "5px",
+            cursor: "pointer",
+            fontWeight: "bold"
+          }}
+        >
+          📂 Abrir carpeta de grabaciones
+        </button>
+      </div>
+
+      <p style={{ marginTop: "30px", fontSize: "18px", color: "#555", whiteSpace: "pre-line" }}>
         {status}
       </p>
     </main>

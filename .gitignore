@@ -30,4 +30,4 @@ grabaciones/
 *.spec
 
    src-tauri/target
-   src-tauri/binaries
+   src-tauri/binariessrc-tauri/binaries
