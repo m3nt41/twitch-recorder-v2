@@ -1,51 +1,36 @@
 # 🎬 Twitch Recorder
 
-Una aplicación de escritorio simple y ligera para grabar streams en vivo de Twitch directamente en tu PC.
+Una aplicación de escritorio ligera y moderna para grabar streams de Twitch en Windows.
 
-##  Características
+## ✨ Características
 
-- **Grabación en alta calidad:** Utiliza `streamlink` y `ffmpeg` para capturar la mejor calidad disponible.
-- **Sin ventanas molestas:** Todo el proceso ocurre en segundo plano sin abrir terminales.
-- **Archivos únicos:** Cada grabación se guarda con una marca de tiempo para que nunca se sobrescriban.
-- **Organización automática:** Los vídeos se guardan automáticamente en una carpeta `grabaciones`.
-- **Ligero y rápido:** Construido con Tauri (Rust + React), consume muy pocos recursos.
+- **Cero dependencias**: No necesitas instalar Python, Streamlink ni FFmpeg. Todo viene empaquetado.
+- **Instalación sencilla**: Solo descarga el instalador `.exe` y listo.
+- **Liberación inmediata**: Al detener la grabación, el archivo `.mp4` se libera al instante.
+- **Rendimiento óptimo**: Hecha con Tauri v2, React y Rust.
 
-## 🛠️ Tecnologías utilizadas
+## 🚀 Instalación
 
-- **Frontend:** React, TypeScript, Vite
-- **Backend:** Rust, Tauri
-- **Herramientas externas:** Streamlink, FFmpeg
+1. Ve a la sección de **[Releases](https://github.com/m3nt41/twitch-recorder-v2/releases)** de este repositorio.
+2. Descarga el archivo `twitch-recorder_0.1.0_x64-setup.exe`.
+3. Ejecuta el instalador y sigue los pasos.
 
-##  Instalación
+## 💻 Uso
 
-### Opción 1: Usar el instalador (Windows)
-1. Ve a la sección de [Releases](https://github.com/m3nt41/twitch-recorder/releases) de este repositorio.
-2. Descarga el archivo `.exe` más reciente.
-3. Ejecútalo y sigue los pasos del instalador.
+1. Abre la aplicación.
+2. Escribe el nombre del canal de Twitch que está **en vivo**.
+3. Haz clic en **"Grabar"**.
+4. Cuando quieras terminar, haz clic en **"Detener"**.
+5. El video se guardará en la carpeta `grabaciones` junto al ejecutable.
 
-### Opción 2: Compilar desde el código fuente
-Si tienes Rust, Node.js y pnpm instalados:
+## 🛠️ Desarrollo
 
-1. Clonar el repositorio
-2. cd twitch-recorder
-3. pnpm install
-4. pnpm tauri dev (para desarrollo)
-5. pnpm tauri build (para producción)
+```bash
+git clone https://github.com/m3nt41/twitch-recorder-v2.git
+cd twitch-recorder-v2
+pnpm install
+pnpm tauri dev
+pnpm tauri build
 
-## 🎮 Cómo usar
-
-1. Abre la aplicación **Twitch Recorder**.
-2. Escribe el nombre del canal de Twitch que quieres grabar (ej: `auronplay`, `ibai`).
-3. Haz clic en el botón **🔴 Grabar**.
-4. Cuando quieras terminar, haz clic en **️ Parar**.
-5. ¡Listo! Tu vídeo estará guardado en la carpeta `grabaciones`.
-
-## 📝 Requisitos previos
-
-Para que la aplicación funcione, es necesario tener instalados en el sistema:
-- [Streamlink](https://streamlink.github.io/)
-- [FFmpeg](https://ffmpeg.org/)
-
-## 📄 Licencia
-
-Este proyecto está bajo la Licencia MIT.
+📄 Licencia
+MIT
