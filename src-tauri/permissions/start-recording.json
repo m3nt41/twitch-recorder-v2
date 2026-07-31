@@ -1,0 +1,9 @@
+{
+  "identifier": "allow-start-recording",
+  "description": "Permite ejecutar el comando de grabación",
+  "permissions": [
+    {
+      "name": "start_recording"
+    }
+  ]
+}
